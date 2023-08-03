@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta cha!importantset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Prova</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Prova.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="wrapper" >
+        <!-- Sidebar  -->
+        <nav id="sidebar" style="background-color:#6D9BEC!important">
+            <div class="sidebar-header" style="background-color:#6D9BEC!important">
+                <h3>Lenin Moreno</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Empleados">Empleados</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Maquinaria">Maquinarias</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Asignaciones">Asignaciones</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Resumen">Resumen</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
